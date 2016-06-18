@@ -2,15 +2,15 @@
 
 var padStr = require('./padStr');
 
-String.prototype.padStart = String.prototype.padStart || padStart;
+String.prototype.padEnd = String.prototype.padEnd || padEnd;
 
 /**
- * 从字符串开头开始补位
+ * 从字符串结尾开始补位
  * @param  {Number} targetLength 补位后的字符串长度
  * @param  {String} padString    要用做补位的字符串 默认为空格
  * @return {String}              补位后的值 不会影响到原值
  */
-function padStart(targetLength, padString) {
+function padEnd(targetLength, padString) {
 
   var currentLength = this.length;
 
@@ -27,8 +27,7 @@ function padStart(targetLength, padString) {
     padString += '';
   }
 
-  return padStr(targetLength - this.length, padString) + this;
+  return this + padStr(targetLength - this.length, padString);
 }
 
-
-console.log('123'.padStart(10, 'test'));
+console.log('123'.padEnd(10, 'test'));
