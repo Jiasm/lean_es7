@@ -2,7 +2,7 @@
 
 var padStr = require('./padStr');
 
-String.prototype.padEnd = String.prototype.padEnd || padEnd;
+String.prototype.padEnd = padEnd;
 
 /**
  * 从字符串结尾开始补位
