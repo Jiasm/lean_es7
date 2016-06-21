@@ -19,7 +19,7 @@ function startsWith(str, position) {
   // 如果 不传参数 或者参数为 null  直接返回 false
   if (str === undefined || str === null) return false;
 
-  var len = str.length
+  var len = str.length;
 
   position = +position | 0;
 
